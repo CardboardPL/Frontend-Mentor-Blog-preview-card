@@ -1,13 +1,27 @@
 .blog-preview-card {
-  background-color: hsl(0, 0%, 100%);
+  background-color: var(--neutral-1);
   padding: 1.5rem;
   width: 88%;
   height: 522px;
   min-width: 328px;
   max-width: 385px;
-  border: 1px solid hsl(0, 0%, 7%);
+  border: 1px solid var(--neutral-3);
   border-radius: 1rem;
   margin-bottom: 24px;
+  box-shadow: 8px 8px 0 var(--neutral-3);
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+}
+
+.blog-preview-card:hover,
+.blog-preview-card:focus-within {
+  transform: translate(-8px, -8px);
+  box-shadow: 16px 16px 0 var(--neutral-3);
+}
+
+.blog-preview-card:hover a,
+.blog-preview-card:focus-within a {
+  color: var(--primary);
 }
 
 .blog-preview-card * {
@@ -19,6 +33,7 @@
   display: block;
   height: 200px;
   width: 100%;
+  object-fit: cover;
   border-radius: 0.5rem;
 }
 
@@ -41,7 +56,7 @@
 }
 
 .learning-tag {
-  background-color: hsl(47, 88%, 63%);
+  background-color: var(--primary);
 }
 
 .blog-preview-card p:has(> time) {
@@ -55,9 +70,14 @@
   margin-bottom: 13px;
 }
 
+.blog-title a {
+  color: var(--neutral-3);
+  text-decoration: none;
+}
+
 .blog-description {
   line-height: 21px;
-  color: hsl(0, 0%, 50%);
+  color: var(--neutral-2);
 }
 
 .author-info {
